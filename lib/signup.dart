@@ -66,35 +66,50 @@ class _SignUpState extends State<SignUp> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
-                            'Save Pass Code',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 14.0,
-                              letterSpacing: 1.6,
-                              wordSpacing: 2.3,
-                            ),
+                          Row(
+                            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SizedBox(
+                                child: Checkbox(
+                                    value: checked,
+                                    onChanged: (val) {
+                                      setState(() {
+                                        checked = val;
+                                      });
+                                    }),
+                              ),
+                              Text(
+                                'Save Pass Code',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14.0,
+                                  letterSpacing: 1.6,
+                                  wordSpacing: 2.3,
+                                ),
+                              ),
+                            ],
                           ),
                           TextButton(
-                              onPressed: () {
-                                setState(() {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (_) => Forget(),
-                                    ),
-                                  );
-                                });
-                              },
-                              child: Text(
-                                'Forget Pass Code',
-                                style: TextStyle(
-                                  color: Colors.red,
-                                  fontSize: 14.0,
-                                  letterSpacing: 1.7,
-                                  wordSpacing: 2.1,
-                                ),
-                              )),
+                            onPressed: () {
+                              setState(() {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => Forget(),
+                                  ),
+                                );
+                              });
+                            },
+                            child: Text(
+                              'Forget Pass Code',
+                              style: TextStyle(
+                                color: Colors.red,
+                                fontSize: 14.0,
+                                letterSpacing: 1.7,
+                                wordSpacing: 2.1,
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                       const SizedBox(height: 18.0),

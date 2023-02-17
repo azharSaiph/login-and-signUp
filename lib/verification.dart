@@ -43,10 +43,7 @@ class _VerificationState extends State<Verification> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              OTPPin(titile: '1'),
-              OTPPin(titile: '5'),
-              OTPPin(titile: '9'),
-              OTPPin(titile: '3'),
+              OTPPin(),
             ],
           ),
           const SizedBox(height: 40.0),

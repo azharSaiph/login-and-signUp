@@ -42,18 +42,7 @@ class _ForgetState extends State<Forget> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              OTPPin(
-                titile: '8',
-              ),
-              OTPPin(
-                titile: '0',
-              ),
-              OTPPin(
-                titile: '4',
-              ),
-              OTPPin(
-                titile: '2',
-              ),
+              OTPPin(),
             ],
           ),
           const SizedBox(height: 40.0),
